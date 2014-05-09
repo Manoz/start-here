@@ -7,12 +7,20 @@ Start Here is my own WordPress theme Starter
 
 ### Current 'Theme-Sheck' errors
 
-**REQUIRED:** Could not find **wp_link_pages**.
-    <?php wp_link_pages( $args ); ?>
+**INFO:** recent-posts.php The theme appears to use include or require. If these are being used to include separate sections of a template from independent files, then get_template_part() should be used instead.
 
-> I don't know why this error appears. I have my own function to generate wp_link_pages. I should find why Theme-Check don't want it.
+    Line 120: include( plugin_dir_path( __FILE__ ).'/adm-recent.php' );
 
-**RECOMMENDED:** No reference to **add_theme_support( "custom-header", $args )** was found in the theme. It is recommended that the theme implement this functionality if using an image for the header.
+> The include method works fine. No real problems here.
 
-> I don't want to add this theme_support yet.
+**INFO:** likebox.php The theme appears to use include or require. If these are being used to include separate sections of a template from independent files, then get_template_part() should be used instead.
 
+    Line 92: include( plugin_dir_path( __FILE__ ).'/adm-likebox.php' );
+
+> Same as above
+
+**INFO:** iframe was found in the file likebox.php iframes are sometimes used to load unwanted adverts and code on your site.
+
+    Line 51: <iframe src='//www.facebook.com/plugins/likebox.php?href=<?php echo $page ; 
+
+> No problems here. This is the Facebook iFrame. I'll add it inside a php var to avoir theme check errors.
