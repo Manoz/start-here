@@ -1,7 +1,8 @@
-start-here
+Start Here, another WordPress theme starter
 ==========
 
-Start Here is my own WordPress theme Starter
+Start Here is my own WordPress theme Starter.
+You can find a **live version** here: http://bromine.mwanoz.fr
 
 ![ScreenShot](https://raw.github.com/Manoz/start-here/master/start-here/screenshot.png)
 
